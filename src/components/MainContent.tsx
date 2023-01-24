@@ -53,7 +53,7 @@ const MainContent = ({isLightMode,chatLog, setChatLog}:Iprops) => {
             )
           }
         </div>
-        <div className={`max-w-4xl absolute z-20 left-[50%] translate-x-[-50%] bottom-8 rounded-md w-full mx-auto ${isLightMode && 'bg-gray-100 border border-gray-200 shadow-[0_0_10px_rgba(0,0,0,0.10)]'} bg-slate-700 h-12 `}>
+        <div className={`max-w-4xl absolute z-20 border border-gray-400 left-[50%] translate-x-[-50%] bottom-8 rounded-md w-full mx-auto ${isLightMode && 'bg-gray-100 border border-gray-200 shadow-[0_0_10px_rgba(0,0,0,0.10)]'} bg-slate-700 h-12 `}>
           <form onSubmit={handleSubmit} className={`flex items-center w-full h-full rounded-md ${isLightMode && 'bg-gray-100 text-gray-900'}`}>
             <input type="text" value={input} onChange={(e)=>setInput(e.target.value)} className='w-full h-full bg-inherit outline-none rounded-md pl-4' />
             <button className='flex items-center space-x-2 px-2'>
