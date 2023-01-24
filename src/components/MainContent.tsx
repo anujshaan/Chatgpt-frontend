@@ -13,7 +13,7 @@ type Iprops={
 
 const MainContent = ({isLightMode,chatLog, setChatLog}:Iprops) => {
   const [input, setInput] = useState('');
-  
+  console.log(chatLog)
 
   const handleSubmit = async(e:FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -37,9 +37,19 @@ const MainContent = ({isLightMode,chatLog, setChatLog}:Iprops) => {
       <div className='h-full w-full relative flex flex-col'>
         <div className={`flex-1 w-full ${isLightMode && 'text-black'} overflow-y-scroll pb-28 pt-8 `} >
           {
-            chatLog.map((data,index)=>(
-              <ChartCard key={index} data={data} isLightMode={isLightMode} />
-            ))
+            chatLog.length != 0 ? (
+              <>
+                {
+                  chatLog.map((data,index)=>(
+                    <ChartCard key={index} data={data} isLightMode={isLightMode} />
+                  ))
+                }
+              </>
+            ) : (
+              <div className='h-full w-full flex items-center justify-center'>
+                <h2 className={`${isLightMode && 'text-gray-800'} text-white`}>Ask anything you want</h2>
+              </div>
+            )
           }
         </div>
         <div className={`max-w-4xl absolute z-20 left-[50%] translate-x-[-50%] bottom-8 rounded-md w-full mx-auto ${isLightMode && 'bg-gray-100 border border-gray-200 shadow-[0_0_10px_rgba(0,0,0,0.10)]'} bg-slate-700 h-12 `}>
