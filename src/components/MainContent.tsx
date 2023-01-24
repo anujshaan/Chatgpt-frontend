@@ -23,7 +23,7 @@ const MainContent = ({isLightMode,chatLog, setChatLog}:Iprops) => {
       "message":input
     }
     setInput('')
-    const response = await axios.post('http://localhost:5000',sendReq)
+    const response = await axios.post('https://chatgpt-backend-bwzf.onrender.com/',sendReq)
 
     const chatGptMessage = response.data.choices[0].text
 
