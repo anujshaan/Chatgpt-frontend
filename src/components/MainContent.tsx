@@ -46,8 +46,9 @@ const MainContent = ({isLightMode,chatLog, setChatLog}:Iprops) => {
                 }
               </>
             ) : (
-              <div className='h-full w-full flex items-center justify-center'>
-                <h2 className={`${isLightMode && 'text-gray-800'} text-white`}>Ask anything you want</h2>
+              <div className='h-full w-full flex flex-col items-center justify-center'>
+                <h2 className={`${isLightMode && 'text-gray-800'} text-2xl text-white`}>Ask anything you want</h2>
+                <h4 className={`${isLightMode && 'text-gray-800'} text-white`}>Made by Anuj Shaan</h4>
               </div>
             )
           }
