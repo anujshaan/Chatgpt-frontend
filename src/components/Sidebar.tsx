@@ -9,7 +9,7 @@ type props={
 
 const Sidebar = ({isLightMode,setIsLightMode,setChatLog}:props) => {
   return (
-    <div className={`h-screen bg-gray-900 w-64`}>
+    <div className={`h-screen bg-gray-900 md:block md:w-64 hidden `}>
       <div className='p-2 py-4 h-full flex flex-col'>
         <div className='flex-1'>
           <div onClick={()=>setChatLog([])} className='flex items-center border border-gray-700 p-4 rounded-lg space-x-2 cursor-pointer hover:bg-gray-800'>

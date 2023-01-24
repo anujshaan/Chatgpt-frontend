@@ -33,7 +33,7 @@ const MainContent = ({isLightMode,chatLog, setChatLog}:Iprops) => {
   }
 
   return (
-    <div className={`h-screen flex-1 bg-gray-800 ${isLightMode && 'bg-gray-100'} `}>
+    <div className={`h-screen md:flex-1 w-full bg-gray-800 ${isLightMode && 'bg-gray-100'} `}>
       <div className='h-full w-full relative flex flex-col'>
         <div className={`flex-1 w-full ${isLightMode && 'text-black'} overflow-y-scroll pb-28 pt-8 `} >
           {
